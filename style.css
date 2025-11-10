@@ -99,6 +99,22 @@ body {
 .items_list_computers {
   display: flex;
   gap: 15px;
+  overflow-x: auto;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+}
+
+.items_list_computers .item-btn {
+  /* ensure this selector overrides the general .item-btn where needed */
+  background-color: rgb(73, 125, 0);
+  color: #ffffff;
+}
+.items_list_computers .item-btn:hover {
+  background-color: rgb(95, 155, 25);
+}
+.items_list_computers .item-btn:focus {
+  outline: 3px solid rgba(95, 155, 25, 0.25);
+  outline-offset: 3px;
 }
 
 .enterance_text {
@@ -107,10 +123,49 @@ body {
   text-align: center;
   padding: 40px;
   margin: 20px;
-  color: rgb(41, 37, 36);
+  color: black;
 }
 
 .title_computer {
+  font-family: poppins, sans-serif;
+  font-size: 30px;
+  text-align: left;
+  margin: 20px;
+  color: rgb(41, 37, 36);
+  padding-bottom: 15px;
+}
+
+/* Tools Category Section */
+.tools {
+  background: oklch(78.5% 0.189 259.5);
+  border-bottom: 5px solid rgb(0, 73, 125);
+  padding: 20px;
+  margin: 20px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 8px;
+}
+
+.items_list_tools {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+}
+
+/* Make tools buttons light blue with dark text */
+.items_list_tools .item-btn {
+  background-color: #cfeeff; /* light blue */
+  color: #053e5a; /* dark-blue text for contrast */
+  border-radius: 6px;
+  padding: 50px 60px; /* a bit roomy to match other tiles */
+  font-weight: 600;
+}
+.items_list_tools .item-btn:hover {
+  background-color: #b6e0ff; /* slightly darker on hover */
+}
+
+.title_tools {
   font-family: poppins, sans-serif;
   font-size: 30px;
   text-align: left;
@@ -129,6 +184,7 @@ body {
   cursor: pointer;
   font-size: 1.25rem; /* increased from 16px to 1.5rem (~24px) */
 }
+
 /* Responsive */
 @media (max-width: 480px) {
   .logo {
@@ -151,4 +207,15 @@ body {
 /* Utility: center page content if needed */
 .container {
   box-sizing: border-box;
+}
+
+/* Monitor Page */
+
+.monitor_page_title {
+  font-family: poppins, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  padding: 40px;
+  margin: 20px;
+  color: black;
 }
