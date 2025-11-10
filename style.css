@@ -219,3 +219,75 @@ body {
   margin: 20px;
   color: black;
 }
+
+.mices_page_title {
+  font-family: poppins, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  padding: 40px;
+  margin: 20px;
+  color: black;
+}
+
+.laptop_page_title {
+  font-family: poppins, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  padding: 40px;
+  margin: 20px;
+  color: black;
+}
+
+.keyboard_page_title {
+  font-family: poppins, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  padding: 40px;
+  margin: 20px;
+  color: black;
+}
+
+.headphones_page_title {
+  font-family: poppins, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  padding: 40px;
+  margin: 20px;
+  color: black;
+}
+
+.charger_page_title {
+  font-family: poppins, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  padding: 40px;
+  margin: 20px;
+  color: black;
+}
+
+.cables_page_title {
+  font-family: poppins, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  padding: 40px;
+  margin: 20px;
+  color: black;
+}
+
+.speaker_page_title {
+  font-family: poppins, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  padding: 40px;
+  margin: 20px;
+  color: black;
+}
+
+.webcams_page_title {
+  font-family: poppins, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  padding: 40px;
+  margin: 20px;
+  color: black;
+}
