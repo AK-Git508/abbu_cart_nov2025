@@ -39,14 +39,29 @@ body {
 
 /* Category Section */
 
-.category {
+.computers {
   background: oklch(79.2% 0.209 151.711);
   border-bottom: 5px solid rgb(73, 125, 0);
   padding: 20px;
   margin: 20px;
+  font-family: "Poppins", sans-serif;
   border-radius: 8px;
 }
 
+.items_list_computers {
+  display: flex;
+  gap: 15px;
+}
+
+.item-btn {
+  background-color: rgb(73, 125, 0);
+  color: white;
+  border: none;
+  padding: 50px 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
 /* Responsive */
 @media (max-width: 480px) {
   .logo {
