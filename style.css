@@ -19,7 +19,16 @@ body {
   align-items: center;
   gap: 12px;
   padding: 20px 20px;
+  justify-content: space-between;
 }
+
+/* Wrapper for logo and title to keep them together on the left */
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .logo {
   width: 50px;
   height: 50px;
@@ -35,6 +44,45 @@ body {
   letter-spacing: 0.1px;
   text-transform: uppercase;
   color: rgb(41, 37, 36);
+}
+
+/* Add a collection button in header */
+.add-collection-btn {
+  background-color: rgb(73, 125, 0);
+  color: white;
+  font-family: Poppins, sans-serif;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+.add-collection-btn:hover {
+  background-color: rgb(60, 105, 0);
+}
+
+.add-collection-btn:active {
+  background-color: rgb(50, 90, 0);
+}
+
+/* Category item buttons (large tiles) */
+.item-btn {
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  line-height: 1;
+  border: none;
+  border-radius: 8px;
+  background: #0b2545; /* dark blue button background */
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Category Section */
@@ -53,14 +101,33 @@ body {
   gap: 15px;
 }
 
+.enterance_text {
+  font-family: poppins, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  padding: 40px;
+  margin: 20px;
+  color: rgb(41, 37, 36);
+}
+
+.title_computer {
+  font-family: poppins, sans-serif;
+  font-size: 30px;
+  text-align: left;
+  margin: 20px;
+  color: rgb(41, 37, 36);
+  padding-bottom: 15px;
+}
+
 .item-btn {
   background-color: rgb(73, 125, 0);
   color: white;
+  font-family: poppins, sans-serif;
   border: none;
-  padding: 50px 50px;
+  padding: 50px 75px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1.25rem; /* increased from 16px to 1.5rem (~24px) */
 }
 /* Responsive */
 @media (max-width: 480px) {
@@ -73,6 +140,11 @@ body {
   }
   .site-header .container {
     padding: 10px;
+  }
+  /* Make buttons smaller on narrow screens */
+  .item-btn {
+    font-size: 1rem;
+    padding: 12px 18px;
   }
 }
 
