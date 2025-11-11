@@ -218,24 +218,17 @@ body {
   padding: 40px;
   margin: 20px;
   color: black;
+  background-color: white;
 }
 
-.mices_page_title {
+.mice_page_title {
   font-family: poppins, sans-serif;
   font-size: 50px;
   text-align: center;
   padding: 40px;
   margin: 20px;
   color: black;
-}
-
-.laptop_page_title {
-  font-family: poppins, sans-serif;
-  font-size: 50px;
-  text-align: center;
-  padding: 40px;
-  margin: 20px;
-  color: black;
+  background-color: #fef9c2;
 }
 
 .keyboard_page_title {
@@ -244,7 +237,8 @@ body {
   text-align: center;
   padding: 40px;
   margin: 20px;
-  color: black;
+  color: white;
+  background-color: #44535e;
 }
 
 .headphones_page_title {
@@ -253,7 +247,8 @@ body {
   text-align: center;
   padding: 40px;
   margin: 20px;
-  color: black;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 162, 162);
 }
 
 .charger_page_title {
@@ -263,15 +258,7 @@ body {
   padding: 40px;
   margin: 20px;
   color: black;
-}
-
-.cables_page_title {
-  font-family: poppins, sans-serif;
-  font-size: 50px;
-  text-align: center;
-  padding: 40px;
-  margin: 20px;
-  color: black;
+  background-color: rgb(214, 255, 138);
 }
 
 .speaker_page_title {
@@ -281,6 +268,7 @@ body {
   padding: 40px;
   margin: 20px;
   color: black;
+  background-color: rgb(144, 161, 185);
 }
 
 .webcams_page_title {
@@ -289,5 +277,6 @@ body {
   text-align: center;
   padding: 40px;
   margin: 20px;
-  color: black;
+  color: rgb(255, 255, 255);
+  background-color: rgb(43, 127, 255);
 }
