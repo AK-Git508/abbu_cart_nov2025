@@ -218,7 +218,7 @@ body {
   padding: 40px;
   margin: 20px;
   color: black;
-  background-color: white;
+  background-color: rgb(190, 190, 190);
 }
 
 .mice_page_title {
@@ -248,7 +248,7 @@ body {
   padding: 40px;
   margin: 20px;
   color: rgb(255, 255, 255);
-  background-color: rgb(255, 162, 162);
+  background-color: rgb(175, 73, 73);
 }
 
 .charger_page_title {
