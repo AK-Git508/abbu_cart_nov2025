@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hammer</title>
+    <!-- We'll keep the custom fonts linked as they were in your original code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* General Styles for the Header and Page Title */
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        background-color: #f7f7f7;
+        color: #333;
+      }
+
+      .site-header {
+        background-color: #fff;
+        border-bottom: 2px solid #e6e9ee;
+        padding: 10px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .header-brand {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+        /* Using a placeholder image URL for the logo */
+        content: url("https://placehold.co/40x40/000000/ffffff?text=AC");
+      }
+
+      .site-title {
+        font-family: "Rubik Mono One", monospace;
+        font-size: 24px;
+        color: #000;
+        margin: 0;
+      }
+
+      .add-collection-btn {
+        background-color: #000;
+        color: white;
+        font-family: "Poppins", sans-serif;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        transition: background-color 0.3s, transform 0.1s;
+      }
+
+      .add-collection-btn:hover {
+        background-color: #333;
+        transform: translateY(-1px);
+      }
+
+      .hammer_page_title {
+        font-family: poppins, sans-serif;
+        font-size: 50px;
+        text-align: center;
+        padding: 40px;
+        margin: 20px;
+        color: rgb(0, 0, 0);
+        background-color: #ffc037;
+      }
+
+      /* Product Grid Styles */
+      .products-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* 5 columns for desktop */
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .product-link {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .product-card {
+        background: white;
+        border: 2px solid #e6e9ee;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.2s, box-shadow 0.3s;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .product-image {
+        width: 100%;
+        height: 180px;
+        object-fit: contain;
+        margin-bottom: 15px;
+        background: #f8f9fb;
+        border-radius: 8px;
+        padding: 10px;
+      }
+
+      .product-name {
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+        margin: 10px 0;
+        min-height: 40px;
+        line-height: 1.4;
+      }
+
+      .product-price {
+        font-family: "Poppins", sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: rgb(73, 125, 0); /* A strong green for the price */
+        margin: 10px 0;
+      }
+
+      .buy-btn {
+        background-color: rgb(73, 125, 0);
+        color: white;
+        font-family: "Poppins", sans-serif;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 600;
+        width: 100%;
+        margin-top: 15px;
+        transition: background-color 0.3s, box-shadow 0.2s;
+        box-shadow: 0 4px 6px rgba(73, 125, 0, 0.3);
+      }
+
+      .buy-btn:hover {
+        background-color: rgb(60, 105, 0);
+        box-shadow: 0 6px 8px rgba(73, 125, 0, 0.4);
+      }
+
+      /* Responsive design */
+      @media (max-width: 1200px) {
+        .products-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      @media (max-width: 900px) {
+        .products-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .hammer_page_title {
+          font-size: 36px;
+          padding: 30px 15px;
+        }
+      }
+
+      @media (max-width: 400px) {
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+        .container {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+        }
+        .add-collection-btn {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="header-brand">
+          <img src="image.png" alt="Abbu Cart logo" class="logo" />
+          <h1 class="site-title">ABBU CART</h1>
+        </div>
+      </div>
+    </header>
+    <h1 class="hammer_page_title">Hammer</h1>
+
+    <div class="products-container">
+      <!-- This is the container that enables the grid layout -->
+      <div class="products-grid">
+        <!-- Product 1: Hammer -->
+        <a href="hammer.html" class="product-link">
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/71bG1mX3JDL._AC_SL1500_.jpg"
+              alt="Hammer"
+              class="product-image"
+              onerror="this.onerror=null;this.src='https://placehold.co/300x200/ffb81f/000000?text=Hammer+1';"
+            />
+            <h3 class="product-name">Standard Striking Hammer</h3>
+            <p class="product-price">$15.99</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </a>
+
+        <!-- Product 2: Claw Hammer -->
+        <a href="hammer2.html" class="product-link">
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/61jL2b8gGDL._AC_SL1500_.jpg"
+              alt="Claw Hammer"
+              class="product-image"
+              onerror="this.onerror=null;this.src='https://placehold.co/300x200/ffb81f/000000?text=Hammer+2';"
+            />
+            <h3 class="product-name">Professional Curved Claw Hammer</h3>
+            <p class="product-price">$12.49</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </a>
+
+        <!-- Product 3: Sledge Hammer -->
+        <a href="hammer3.html" class="product-link">
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/71Y4b3g3GDL._AC_SL1500_.jpg"
+              alt="Sledge Hammer"
+              class="product-image"
+              onerror="this.onerror=null;this.src='https://placehold.co/300x200/ffb81f/000000?text=Hammer+3';"
+            />
+            <h3 class="product-name">Heavy Duty Sledge Hammer</h3>
+            <p class="product-price">$29.99</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </a>
+
+        <!-- Product 4: Rubber Mallet -->
+        <a href="hammer4.html" class="product-link">
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/61jG2b8gGDL._AC_SL1500_.jpg"
+              alt="Rubber Mallet"
+              class="product-image"
+              onerror="this.onerror=null;this.src='https://placehold.co/300x200/ffb81f/000000?text=Hammer+4';"
+            />
+            <h3 class="product-name">Non-Marring Rubber Mallet</h3>
+            <p class="product-price">$9.99</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </a>
+
+        <!-- Product 5: Framing Hammer -->
+        <a href="hammer5.html" class="product-link">
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/71bG1mX3JDL._AC_SL1500_.jpg"
+              alt="Framing Hammer"
+              class="product-image"
+              onerror="this.onerror=null;this.src='https://placehold.co/300x200/ffb81f/000000?text=Hammer+5';"
+            />
+            <h3 class="product-name">High-Velocity Framing Hammer</h3>
+            <p class="product-price">$18.49</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </a>
+      </div>
+      <!-- End of products-grid -->
+    </div>
+  </body>
+</html>

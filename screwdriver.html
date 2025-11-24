@@ -1,9 +1,11 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Chargers</title>
+    <title>Screwdriver</title>
+    <!-- Removed external style.css link as per single-file mandate -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,8 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Mono+One&display=swap"
       rel="stylesheet"
     />
-  </head>
-  <style>
+    <style>
       /* Product Grid Styles */
       .products-container {
         max-width: 1400px;
@@ -63,7 +64,7 @@
       }
 
       .product-name {
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
         font-size: 14px;
         font-weight: 500;
         color: #333;
@@ -73,7 +74,7 @@
       }
 
       .product-price {
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
         font-size: 18px;
         font-weight: 700;
         color: rgb(73, 125, 0);
@@ -83,7 +84,7 @@
       .buy-btn {
         background-color: rgb(73, 125, 0);
         color: white;
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
         border: none;
         padding: 10px 20px;
         border-radius: 5px;
@@ -123,6 +124,16 @@
           grid-template-columns: 1fr;
         }
       }
+
+      .screwdriver_page_title {
+        font-family: poppins, sans-serif;
+        font-size: 50px;
+        text-align: center;
+        padding: 40px;
+        margin: 20px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(113, 84, 129);
+      }
     </style>
   </head>
   <body>
@@ -130,71 +141,92 @@
       <div class="container">
         <div class="header-brand">
           <img src="image.png" alt="Abbu Cart logo" class="logo" />
-          <h1 class="site-title">ABBUMUM CART</h1>
+          <h1 class="site-title">ABBU CART</h1>
         </div>
       </div>
     </header>
-    <h1 class="charger_page_title">Chargers</h1>
-    
+    <!-- Updated class and content for Screwdriver page -->
+    <h1 class="screwdriver_page_title">Screwdriver</h1>
+
+    <!-- Example Product Grid (You can populate this with actual screwdriver data) -->
     <div class="products-container">
       <div class="products-grid">
-        <!-- Product 1 -->
-        <a href="https://www.amazon.com/dp/B0B2MZ6JW1" target="_blank" class="product-link">
+        <!-- Product Card 1 -->
+        <a href="#" class="product-link">
           <div class="product-card">
-            <img src="https://via.placeholder.com/300x200/d6ff8a/666666?text=Charger+1" 
-                 alt="Anker USB-C Charger" 
-                 class="product-image">
-            <h3 class="product-name">Anker 20W USB-C Fast Charger</h3>
-            <p class="product-price">$12.99</p>
-            <button class="buy-btn">View on Amazon</button>
+            <img
+              src="https://placehold.co/300x180/E6E9EE/333333?text=Phillips+Driver"
+              onerror="this.src='https://placehold.co/300x180/E6E9EE/333333?text=Driver';"
+              alt="Phillips Screwdriver"
+              class="product-image"
+            />
+            <p class="product-name">
+              High-Torque Magnetic Phillips Head Screwdriver Set
+            </p>
+            <p class="product-price">$19.99</p>
+            <button class="buy-btn">Add to Cart</button>
           </div>
         </a>
 
-        <!-- Product 2 -->
-        <a href="https://www.amazon.com/dp/B09C5RG6KV" target="_blank" class="product-link">
+        <!-- Product Card 2 -->
+        <a href="#" class="product-link">
           <div class="product-card">
-            <img src="https://via.placeholder.com/300x200/d6ff8a/666666?text=Charger+2" 
-                 alt="Apple MagSafe Charger" 
-                 class="product-image">
-            <h3 class="product-name">Apple MagSafe Wireless Charger</h3>
-            <p class="product-price">$39.99</p>
-            <button class="buy-btn">View on Amazon</button>
+            <img
+              src="https://placehold.co/300x180/E6E9EE/333333?text=Flathead"
+              onerror="this.src='https://placehold.co/300x180/E6E9EE/333333?text=Flathead';"
+              alt="Flathead Screwdriver"
+              class="product-image"
+            />
+            <p class="product-name">
+              Precision Flathead/Slotted Screwdriver Kit
+            </p>
+            <p class="product-price">$14.50</p>
+            <button class="buy-btn">Add to Cart</button>
           </div>
         </a>
 
-        <!-- Product 3 -->
-        <a href="https://www.amazon.com/dp/B08T5QN2TR" target="_blank" class="product-link">
+        <!-- Product Card 3 -->
+        <a href="#" class="product-link">
           <div class="product-card">
-            <img src="https://via.placeholder.com/300x200/d6ff8a/666666?text=Charger+3" 
-                 alt="Samsung Fast Charger" 
-                 class="product-image">
-            <h3 class="product-name">Samsung 45W Super Fast Charger</h3>
-            <p class="product-price">$29.99</p>
-            <button class="buy-btn">View on Amazon</button>
+            <img
+              src="https://placehold.co/300x180/E6E9EE/333333?text=Torx+Set"
+              onerror="this.src='https://placehold.co/300x180/E6E9EE/333333?text=Torx+Set';"
+              alt="Torx Screwdriver Set"
+              class="product-image"
+            />
+            <p class="product-name">Professional 12-Piece Torx Security Set</p>
+            <p class="product-price">$35.99</p>
+            <button class="buy-btn">Add to Cart</button>
           </div>
         </a>
 
-        <!-- Product 4 -->
-        <a href="https://www.amazon.com/dp/B0BDY3KTLQ" target="_blank" class="product-link">
+        <!-- Product Card 4 -->
+        <a href="#" class="product-link">
           <div class="product-card">
-            <img src="https://via.placeholder.com/300x200/d6ff8a/666666?text=Charger+4" 
-                 alt="Multi-Port Charger" 
-                 class="product-image">
-            <h3 class="product-name">Anker 4-Port 100W GaN Charger</h3>
-            <p class="product-price">$79.99</p>
-            <button class="buy-btn">View on Amazon</button>
+            <img
+              src="https://placehold.co/300x180/E6E9EE/333333?text=Ratchet"
+              onerror="this.src='https://placehold.co/300x180/E6E9EE/333333?text=Ratchet';"
+              alt="Ratcheting Screwdriver"
+              class="product-image"
+            />
+            <p class="product-name">Ratcheting Multi-Bit Driver with Storage</p>
+            <p class="product-price">$28.00</p>
+            <button class="buy-btn">Add to Cart</button>
           </div>
         </a>
 
-        <!-- Product 5 -->
-        <a href="https://www.amazon.com/dp/B09Y3KJWL5" target="_blank" class="product-link">
+        <!-- Product Card 5 -->
+        <a href="#" class="product-link">
           <div class="product-card">
-            <img src="https://via.placeholder.com/300x200/d6ff8a/666666?text=Charger+5" 
-                 alt="Wireless Charging Pad" 
-                 class="product-image">
-            <h3 class="product-name">Belkin 3-in-1 Wireless Charger</h3>
-            <p class="product-price">$149.99</p>
-            <button class="buy-btn">View on Amazon</button>
+            <img
+              src="https://placehold.co/300x180/E6E9EE/333333?text=Pocket+Tool"
+              onerror="this.src='https://placehold.co/300x180/E6E9EE/333333?text=Pocket+Tool';"
+              alt="Pocket Screwdriver"
+              class="product-image"
+            />
+            <p class="product-name">Mini Pocket Screwdriver for Electronics</p>
+            <p class="product-price">$9.25</p>
+            <button class="buy-btn">Add to Cart</button>
           </div>
         </a>
       </div>

@@ -90,17 +90,18 @@ body {
 .categories-container {
   display: flex;
   gap: 20px;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1600px;
+  margin: 0 auto 0 90px;
 }
 
 .computers {
   background: oklch(79.2% 0.209 151.711);
   border-bottom: 5px solid rgb(73, 125, 0);
   padding: 20px;
+  padding-bottom: 50px;
   font-family: "Poppins", sans-serif;
   border-radius: 8px;
   flex: 1;
@@ -112,6 +113,9 @@ body {
   flex-direction: column;
   gap: 15px;
   padding: 10px 0;
+  max-height: 380px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 .items_list_computers .item-btn {
@@ -119,6 +123,9 @@ body {
   background-color: rgb(73, 125, 0);
   color: #ffffff;
   width: 100%;
+  padding: 20px 30px;
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 .items_list_computers .item-btn:hover {
   background-color: rgb(95, 155, 25);
@@ -129,19 +136,29 @@ body {
 }
 
 .enterance_text {
-  font-family: poppins, sans-serif;
-  font-size: 50px;
+  font-family: "Rubik Mono One", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 80px;
   text-align: center;
   padding: 40px;
+  padding-bottom: 10px;
   margin: 20px;
   color: black;
 }
 
+.enterance_subtext {
+  font-family: poppins, sans-serif;
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 60px;
+  margin: 20px;
+  color: black;
+}
 .title_computer {
   font-family: poppins, sans-serif;
   font-size: 30px;
   text-align: left;
-  margin: 0 0 15px 0;
+  margin: 0 0 30px 0;
   color: rgb(41, 37, 36);
   padding-bottom: 15px;
 }
@@ -162,6 +179,9 @@ body {
   flex-direction: column;
   gap: 15px;
   padding: 10px 0;
+  max-height: 380px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 /* Make tools buttons light blue with dark text */
@@ -169,8 +189,9 @@ body {
   background-color: #cfeeff; /* light blue */
   color: #053e5a; /* dark-blue text for contrast */
   border-radius: 6px;
-  padding: 20px 30px; /* adjusted for vertical layout */
+  padding: 20px 30px;
   font-weight: 600;
+  font-size: 1.25rem;
   width: 100%;
 }
 .items_list_tools .item-btn:hover {
@@ -184,6 +205,7 @@ body {
   margin: 0 0 15px 0;
   color: rgb(41, 37, 36);
   padding-bottom: 15px;
+  min-height: 60px;
 }
 
 .item-btn {
